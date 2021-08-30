@@ -9,8 +9,8 @@
   ================================================== -->
 	<meta charset="utf-8">
 	<title>RADARES </title>
-	<meta name="description" content="Radares">
-	<meta name="author" content="Ana Estrada">
+	<meta name="description" content="Free Responsive Html5 Css3 Templates | zerotheme.com">
+	<meta name="author" content="www.zerotheme.com">
 	<!-- Owl Carousel Assets -->
     <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
     <!-- CSS
@@ -135,14 +135,17 @@
 					<div class="column sm-1-2">
 						<div class="wrap-col">
 							<br>
-							<br><br>
-							<br><br>
-								<form action="../../form-result.php" target="_blank">
-								   <center><p>Pregunta 1 </p></center>
-								    <input type="radio" name="cuando" value="hoy" checked> a)<br>
-								    <input type="radio" name="cuando" value="hoy" checked> b)<br>
-								    <input type="radio" name="cuando" value="hoy" checked> c)<br>
-								    <input type="submit" value="Enviar">
+							<br>
+								<form >
+								   <center><p>¿Cuál es el alcance óptimo del haz de un radar? </p></center>
+								    <input type="radio" name="pregunta1" value="¡Respuesta correcta!" checked> a) 5 a 200km
+								    
+								    <input type="radio" name="pregunta1" value="Respuesta incorrecta, intenta de nuevo" checked> b) 200km a 300km
+								    
+								    <input type="radio" name="pregunta1" value="Respuesta incorrecta, intenta de nuevo" checked> c)5 a 100km
+								    <br>
+								    <br>
+								    <button id="btn1">Enviar</button>
 								</form>
 						</div>
 					</div>
@@ -150,23 +153,26 @@
 			<div class="row wrap-box"><!--Start Box-->
 					<div class="column sm-1-2">
 						<div class="wrap-col">
-							<h2>¿Radar Doppler?</h2>
+							<h2>Radar Doppler</h2>
 							<br>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/cV0iNfLHeEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/cpnvyb70K7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<br> 
 						</div>
 					</div>
 					<div class="column sm-1-2">
 						<div class="wrap-col">
-							<br>
-							<br><br>
-							<br><br>
-								<form action="../../form-result.php" target="_blank">
-								   <center><p>Pregunta 2 </p></center>
-								    <input type="radio" name="cuando" value="hoy" checked> a)<br>
-								    <input type="radio" name="cuando" value="hoy" checked> b)<br>
-								    <input type="radio" name="cuando" value="hoy" checked> c)<br>
-								    <input type="submit" value="Enviar">
+						<br>
+						<br>
+								<form >
+								   <center><p>¿Qué variables mide el radar doppler respecto a un objeto ? </p></center>
+								    <input type="radio" name="pregunta2" value="Respuesta incorrecta, intenta de nuevo"checked> a) distancia y altitud
+								    
+								    <input type="radio" name="pregunta2" value= "Respuesta incorrecta, intenta de nuevo"checked> b) rumbo, distancia y altitud
+								    
+								    <input type="radio" name="pregunta2" value="¡Respuesta correcta!" checked> c)rumbo, distancia, altitud y velocidad
+								    <br>
+								    <br>
+								    <button id="btn2">Enviar</button>
 								</form>
 						</div>
 					</div>
@@ -174,9 +180,38 @@
 	</div>
 </section>
 		
+ <script>
+        const btn = document.querySelector('#btn1');
+        // handle button click
+        btn.onclick = function () {
+            const rbs = document.querySelectorAll('input[name="pregunta1"]');
+            let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    selectedValue = rb.value;
+                    break;
+                }
+            }
+            alert(selectedValue);
+        };
+    </script>
 
+	 <script>
+        const btn1 = document.querySelector('#btn2');
+        // handle button click
+        btn1.onclick = function () {
+            const rbs = document.querySelectorAll('input[name="pregunta2"]');
+            let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    selectedValue = rb.value;
+                    break;
+                }
+            }
+            alert(selectedValue);
+        };
+    </script>
 
-	
 
 <!-- Owl Carusel JavaScript -->
 	<script src="owlcarousel/owl.carousel.js"></script>
